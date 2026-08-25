@@ -1,14 +1,14 @@
 ﻿@model IEnumerable<EmployeeManagementPayrollSystemUI.Models.Employee>
 
 @{
-    ViewData["Title"] = "Current Employees";
+    ViewData["Title"] = "Home Page";
 }
 
 <div class="container my-4">
     <div class="d-flex justify-content-between align-items-center mb-3">
         <div>
             <h2 class="mb-1">Employees</h2>
-            <p class="text-muted mb-0">List of all registered employees.</p>
+            <p class="text-muted mb-0">List of all employees on the Database.</p>
         </div>
         <a asp-controller="Employees" asp-action="Create" class="btn btn-primary">
             + Add Employee

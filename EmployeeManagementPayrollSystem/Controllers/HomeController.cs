@@ -8,7 +8,7 @@ namespace EmployeeManagementPayrollSystem.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index", "Employees");
         }
 
         public IActionResult Privacy()

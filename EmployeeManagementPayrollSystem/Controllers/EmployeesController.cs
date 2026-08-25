@@ -92,7 +92,7 @@ namespace EmployeeManagementPayrollSystemUI.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            _employeeRepository.DeleteEmployee(id);
+            _employeeRepository.DeactivateEmployee(id);
             return RedirectToAction(nameof(Index));
         }
     }
