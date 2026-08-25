@@ -1,0 +1,50 @@
+﻿@model EmployeeManagementPayrollSystemUI.Models.Employee
+
+@{
+    ViewData["Title"] = "Update Employee";
+}
+
+<div class="container my-4" style="max-width: 550px;">
+    <h2 class="mb-4">Update Employee</h2>
+
+    <form asp-controller="Employees" asp-action="UpdateConfirmed" method="post">
+        <!-- Hidden field to preserve ID and creation date -->
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="DateCreated" />
+
+        <div class="mb-3">
+            <label asp-for="FirstName" class="form-label"><strong>First Name</strong></label>
+            <input asp-for="FirstName" class="form-control" />
+            <span asp-validation-for="FirstName" class="text-danger small"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="LastName" class="form-label"><strong>Last Name</strong></label>
+            <input asp-for="LastName" class="form-control" />
+            <span asp-validation-for="LastName" class="text-danger small"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Age" class="form-label"><strong>Age</strong></label>
+            <input asp-for="Age" type="number" class="form-control" />
+            <span asp-validation-for="Age" class="text-danger small"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label"><strong>Email</strong></label>
+            <input asp-for="Email" type="email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger small"></span>
+        </div>
+
+        <div class="mb-4">
+            <label asp-for="Salary" class="form-label"><strong>Salary</strong></label>
+            <input asp-for="Salary" type="number" step="0.01" class="form-control" />
+            <span asp-validation-for="Salary" class="text-danger small"></span>
+        </div>
+
+        <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
