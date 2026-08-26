@@ -17,7 +17,7 @@ The purpose of this project is to manage core employee operations while intentio
 
 ## Tech Stack
 
-* **Backend:** ASP.NET Core MVC (.NET 8 / C#)
+* **Backend:** ASP.NET Core MVC (.NET 10 / C#)
 * **Data Access:** Dapper (Micro-ORM), ADO.NET
 * **Database:** Microsoft SQL Server, T-SQL (Stored Procedures)
 * **Frontend:** Razor Views (CSHTML), Bootstrap
