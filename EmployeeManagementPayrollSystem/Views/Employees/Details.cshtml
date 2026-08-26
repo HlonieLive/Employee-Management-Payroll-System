@@ -1,0 +1,48 @@
+﻿@model EmployeeManagementSystem.Data.Models.Employee;
+@{
+    ViewData["Title"] = "Employee Details";
+}
+
+<div class="container my-4" style="max-width: 550px;">
+    <h2 class="mb-4">Employee Details</h2>
+        
+        <div class="mb-3">
+            <label asp-for="Id" class="form-label"><strong>EmployeeId:    </strong></label>
+            <span class="text-black">@Model.Id</span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="FirstName" class="form-label"><strong>First Name:    </strong></label>
+            <span class="text-black">@Model.FirstName</span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="LastName" class="form-label"><strong>Last Name:    </strong></label>
+            <span class="text-black">@Model.LastName</span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Age" class="form-label"><strong>Age:    </strong></label>
+            <span class="text-black">@Model.Age</span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label"><strong>Email:    </strong></label>
+           <span class="text-black">@Model.Email</span>
+        </div>
+
+        <div class="mb-4">
+            <label asp-for="Salary" class="form-label"><strong>Salary:    </strong></label>
+            <span class="text-black">@Model.Salary</span>
+        </div>
+       
+        <div class="mb-3">
+            <label asp-for="FirstName" class="form-label"><strong>Date Created:    </strong></label>
+            <span class="text-black">@Model.DateCreated</span>
+        </div>
+
+        <div class="d-flex gap-2">
+            <a asp-controller="Employees" asp-action="Update" asp-route-id="@Model.Id" class="btn btn-secondary">Edit Employee</a>
+            <a asp-action="Index" class="btn btn-primary">Back</a>
+        </div>
+</div>

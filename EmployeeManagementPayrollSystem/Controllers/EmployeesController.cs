@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using EmployeeManagementSystem.Data;
-using EmployeeManagementPayrollSystemUI.Models;
+using EmployeeManagementSystem.Data.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace EmployeeManagementPayrollSystemUI.Controllers
 {
@@ -95,5 +96,15 @@ namespace EmployeeManagementPayrollSystemUI.Controllers
             _employeeRepository.DeactivateEmployee(id);
             return RedirectToAction(nameof(Index));
         }
+
+        //public IActionResult EmployeesDropDown()
+        //{
+        //    var employees = _employeeRepository.GetAllEmployees();
+        //    ViewBag.EmplyeeList = new SelectList(employees.Select(e => new { Id = e.Id, FullName = $"{e.FirstName} {e.LastName}"}),
+        //        "Id",
+        //        "FullName"
+        //    );
+        //    return View();
+        //}
     }
 }

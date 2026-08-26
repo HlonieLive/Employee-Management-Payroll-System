@@ -1,4 +1,4 @@
-﻿@model IEnumerable<EmployeeManagementPayrollSystemUI.Models.Employee>
+﻿@model IEnumerable<EmployeeManagementSystem.Data.Models.Employee>
 
 @{
     ViewData["Title"] = "Home Page";
@@ -14,6 +14,21 @@
             + Add Employee
         </a>
     </div>
+
+    <form asp-controller="Employees" asp-action="Details" method="get" class="mb-3">
+        <select name="id" class="form-select" onchange="if(this.value) this.form.submit();">
+            <option value="" selected disabled>-- Choose an Employee --</option>
+            @foreach (var employee in Model)
+            {
+                <option value="@employee.Id">
+                    @employee.FirstName @employee.LastName (@employee.Email)
+                </option>
+            }
+        </select>
+    </form>
+    <p>
+
+    </p>
 
     @if (Model == null || !Model.Any())
     {

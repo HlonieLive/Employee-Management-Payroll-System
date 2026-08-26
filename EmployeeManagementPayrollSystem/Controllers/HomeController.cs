@@ -1,4 +1,4 @@
-using EmployeeManagementPayrollSystem.Models;
+using EmployeeManagementSystem.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 

@@ -1,4 +1,4 @@
-namespace EmployeeManagementSystem.Data.Models
+﻿namespace EmployeeManagementSystem.Data.Models
 {
     public class ErrorViewModel
     {
